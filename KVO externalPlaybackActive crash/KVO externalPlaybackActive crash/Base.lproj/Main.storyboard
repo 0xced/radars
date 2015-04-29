@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1077" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,8 +16,62 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9U9-f5-DiZ">
+                                <rect key="frame" x="140" y="40" width="320" height="240"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="mtF-HK-LEd"/>
+                                    <constraint firstAttribute="width" secondItem="9U9-f5-DiZ" secondAttribute="height" multiplier="4:3" id="pwD-ym-ooI"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKw-oF-j2q">
+                                <rect key="frame" x="238" y="288" width="125" height="30"/>
+                                <state key="normal" title="Play Basic Stream">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playBasicStream:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fL4-lG-hlz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHX-h0-DO4">
+                                <rect key="frame" x="222" y="326" width="156" height="30"/>
+                                <state key="normal" title="Play Advanced Stream">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAdvancedStream:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X9Q-2x-vs2"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LIj-qa-e7r">
+                                <rect key="frame" x="20" y="364" width="560" height="216"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Playing one stream, then another one will cause a crash with the following exception on iOS 8.4 beta 2:
+
+*** Terminating app due to uncaught exception 'NSRangeException', reason: 'Cannot remove an observer &lt;MPAVController 0x146503c70&gt; for the key path "externalPlaybackActive" from &lt;MPQueuePlayer 0x170106390&gt; because it is not registered as an observer.'
+
+This worked fine since iOS 2.0</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LIj-qa-e7r" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="23I-nF-bBX"/>
+                            <constraint firstAttribute="centerX" secondItem="9U9-f5-DiZ" secondAttribute="centerX" id="39f-Qs-Ggo"/>
+                            <constraint firstItem="hHX-h0-DO4" firstAttribute="top" secondItem="cKw-oF-j2q" secondAttribute="bottom" constant="8" id="6U1-If-YME"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LIj-qa-e7r" secondAttribute="bottom" constant="20" id="EsB-WR-BHF"/>
+                            <constraint firstItem="9U9-f5-DiZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="IGP-Ns-dr6"/>
+                            <constraint firstAttribute="trailing" secondItem="LIj-qa-e7r" secondAttribute="trailing" constant="20" id="MPz-5i-7B8"/>
+                            <constraint firstAttribute="centerX" secondItem="hHX-h0-DO4" secondAttribute="centerX" id="h1f-Rg-x49"/>
+                            <constraint firstAttribute="centerX" secondItem="cKw-oF-j2q" secondAttribute="centerX" id="qiH-46-kfx"/>
+                            <constraint firstItem="LIj-qa-e7r" firstAttribute="top" secondItem="hHX-h0-DO4" secondAttribute="bottom" constant="8" id="tUX-sS-Rak"/>
+                            <constraint firstItem="cKw-oF-j2q" firstAttribute="top" secondItem="9U9-f5-DiZ" secondAttribute="bottom" constant="8" id="wkZ-bf-biZ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="videoView" destination="9U9-f5-DiZ" id="gR9-No-sIO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
