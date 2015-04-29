@@ -13,18 +13,7 @@
 		C2045C961AF18430009EB588 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2045C941AF18430009EB588 /* Main.storyboard */; };
 		C2045C981AF18430009EB588 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2045C971AF18430009EB588 /* Images.xcassets */; };
 		C2045C9B1AF18430009EB588 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2045C991AF18430009EB588 /* LaunchScreen.xib */; };
-		C2045CA71AF18430009EB588 /* KVO_externalPlaybackActive_crashTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2045CA61AF18430009EB588 /* KVO_externalPlaybackActive_crashTests.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		C2045CA11AF18430009EB588 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C2045C7F1AF18430009EB588 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C2045C861AF18430009EB588;
-			remoteInfo = "KVO externalPlaybackActive crash";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		C2045C871AF18430009EB588 /* KVO externalPlaybackActive crash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KVO externalPlaybackActive crash.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,20 +26,10 @@
 		C2045C951AF18430009EB588 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C2045C971AF18430009EB588 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C2045C9A1AF18430009EB588 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		C2045CA01AF18430009EB588 /* KVO externalPlaybackActive crashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "KVO externalPlaybackActive crashTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C2045CA51AF18430009EB588 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C2045CA61AF18430009EB588 /* KVO_externalPlaybackActive_crashTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVO_externalPlaybackActive_crashTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C2045C841AF18430009EB588 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C2045C9D1AF18430009EB588 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -64,7 +43,6 @@
 			isa = PBXGroup;
 			children = (
 				C2045C891AF18430009EB588 /* KVO externalPlaybackActive crash */,
-				C2045CA31AF18430009EB588 /* KVO externalPlaybackActive crashTests */,
 				C2045C881AF18430009EB588 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,7 +51,6 @@
 			isa = PBXGroup;
 			children = (
 				C2045C871AF18430009EB588 /* KVO externalPlaybackActive crash.app */,
-				C2045CA01AF18430009EB588 /* KVO externalPlaybackActive crashTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,23 +79,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C2045CA31AF18430009EB588 /* KVO externalPlaybackActive crashTests */ = {
-			isa = PBXGroup;
-			children = (
-				C2045CA61AF18430009EB588 /* KVO_externalPlaybackActive_crashTests.m */,
-				C2045CA41AF18430009EB588 /* Supporting Files */,
-			);
-			path = "KVO externalPlaybackActive crashTests";
-			sourceTree = "<group>";
-		};
-		C2045CA41AF18430009EB588 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				C2045CA51AF18430009EB588 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,24 +99,6 @@
 			productReference = C2045C871AF18430009EB588 /* KVO externalPlaybackActive crash.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C2045C9F1AF18430009EB588 /* KVO externalPlaybackActive crashTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C2045CAD1AF18430009EB588 /* Build configuration list for PBXNativeTarget "KVO externalPlaybackActive crashTests" */;
-			buildPhases = (
-				C2045C9C1AF18430009EB588 /* Sources */,
-				C2045C9D1AF18430009EB588 /* Frameworks */,
-				C2045C9E1AF18430009EB588 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C2045CA21AF18430009EB588 /* PBXTargetDependency */,
-			);
-			name = "KVO externalPlaybackActive crashTests";
-			productName = "KVO externalPlaybackActive crashTests";
-			productReference = C2045CA01AF18430009EB588 /* KVO externalPlaybackActive crashTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -168,10 +110,6 @@
 				TargetAttributes = {
 					C2045C861AF18430009EB588 = {
 						CreatedOnToolsVersion = 6.2;
-					};
-					C2045C9F1AF18430009EB588 = {
-						CreatedOnToolsVersion = 6.2;
-						TestTargetID = C2045C861AF18430009EB588;
 					};
 				};
 			};
@@ -189,7 +127,6 @@
 			projectRoot = "";
 			targets = (
 				C2045C861AF18430009EB588 /* KVO externalPlaybackActive crash */,
-				C2045C9F1AF18430009EB588 /* KVO externalPlaybackActive crashTests */,
 			);
 		};
 /* End PBXProject section */
@@ -202,13 +139,6 @@
 				C2045C961AF18430009EB588 /* Main.storyboard in Resources */,
 				C2045C9B1AF18430009EB588 /* LaunchScreen.xib in Resources */,
 				C2045C981AF18430009EB588 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C2045C9E1AF18430009EB588 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,23 +155,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C2045C9C1AF18430009EB588 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C2045CA71AF18430009EB588 /* KVO_externalPlaybackActive_crashTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		C2045CA21AF18430009EB588 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C2045C861AF18430009EB588 /* KVO externalPlaybackActive crash */;
-			targetProxy = C2045CA11AF18430009EB588 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C2045C941AF18430009EB588 /* Main.storyboard */ = {
@@ -361,40 +275,6 @@
 			};
 			name = Release;
 		};
-		C2045CAE1AF18430009EB588 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "KVO externalPlaybackActive crashTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KVO externalPlaybackActive crash.app/KVO externalPlaybackActive crash";
-			};
-			name = Debug;
-		};
-		C2045CAF1AF18430009EB588 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "KVO externalPlaybackActive crashTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KVO externalPlaybackActive crash.app/KVO externalPlaybackActive crash";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -414,14 +294,7 @@
 				C2045CAC1AF18430009EB588 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		C2045CAD1AF18430009EB588 /* Build configuration list for PBXNativeTarget "KVO externalPlaybackActive crashTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C2045CAE1AF18430009EB588 /* Debug */,
-				C2045CAF1AF18430009EB588 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
