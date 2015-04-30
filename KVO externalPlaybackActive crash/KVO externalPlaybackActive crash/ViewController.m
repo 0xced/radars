@@ -36,6 +36,7 @@
 
 - (void) playStreamURL:(NSURL *)streamURL
 {
+	[self.moviePlayerController stop];
 	self.moviePlayerController.contentURL = streamURL;
 	[self.moviePlayerController play];
 }
