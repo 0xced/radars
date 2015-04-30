@@ -6,4 +6,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+
+@property (nonatomic, weak) IBOutlet UIView *videoView;
+@property (nonatomic, weak) IBOutlet UISwitch *workaroundRadar20762442Switch;
+
 @end

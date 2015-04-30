@@ -26,7 +26,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKw-oF-j2q">
-                                <rect key="frame" x="238" y="288" width="125" height="30"/>
+                                <rect key="frame" x="238" y="326" width="125" height="30"/>
                                 <state key="normal" title="Play Basic Stream">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -35,7 +35,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHX-h0-DO4">
-                                <rect key="frame" x="222" y="326" width="156" height="30"/>
+                                <rect key="frame" x="222" y="364" width="156" height="30"/>
                                 <state key="normal" title="Play Advanced Stream">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -44,7 +44,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LIj-qa-e7r">
-                                <rect key="frame" x="20" y="402" width="560" height="178"/>
+                                <rect key="frame" x="20" y="440" width="560" height="140"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Playing one stream, then another one will cause a crash with the following exception on iOS 8.4 beta 2:
 
@@ -55,7 +55,7 @@ This worked fine since iOS 2.0</string>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="suO-Rm-God">
-                                <rect key="frame" x="284" y="364" width="33" height="30"/>
+                                <rect key="frame" x="284" y="403" width="33" height="30"/>
                                 <state key="normal" title="Stop">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -63,25 +63,40 @@ This worked fine since iOS 2.0</string>
                                     <action selector="stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FJN-6y-7Fg"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workaround radar 20762442" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="441-Sm-syT">
+                                <rect key="frame" x="197" y="293" width="263" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xFI-s8-fiu">
+                                <rect key="frame" x="140" y="288" width="51" height="31"/>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="LIj-qa-e7r" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="23I-nF-bBX"/>
                             <constraint firstAttribute="centerX" secondItem="9U9-f5-DiZ" secondAttribute="centerX" id="39f-Qs-Ggo"/>
+                            <constraint firstItem="441-Sm-syT" firstAttribute="leading" secondItem="xFI-s8-fiu" secondAttribute="trailing" constant="8" id="39p-vA-hX3"/>
                             <constraint firstItem="hHX-h0-DO4" firstAttribute="top" secondItem="cKw-oF-j2q" secondAttribute="bottom" constant="8" id="6U1-If-YME"/>
+                            <constraint firstItem="9U9-f5-DiZ" firstAttribute="trailing" secondItem="441-Sm-syT" secondAttribute="trailing" id="C39-Mx-VGe"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LIj-qa-e7r" secondAttribute="bottom" constant="20" id="EsB-WR-BHF"/>
                             <constraint firstItem="9U9-f5-DiZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="IGP-Ns-dr6"/>
                             <constraint firstAttribute="trailing" secondItem="LIj-qa-e7r" secondAttribute="trailing" constant="20" id="MPz-5i-7B8"/>
                             <constraint firstAttribute="centerX" secondItem="suO-Rm-God" secondAttribute="centerX" id="NCi-Qg-8Ol"/>
                             <constraint firstItem="suO-Rm-God" firstAttribute="top" secondItem="hHX-h0-DO4" secondAttribute="bottom" constant="8" id="Wsi-tb-DBB"/>
                             <constraint firstAttribute="centerX" secondItem="hHX-h0-DO4" secondAttribute="centerX" id="h1f-Rg-x49"/>
+                            <constraint firstItem="cKw-oF-j2q" firstAttribute="top" secondItem="441-Sm-syT" secondAttribute="bottom" constant="13" id="jom-iL-Web"/>
                             <constraint firstItem="LIj-qa-e7r" firstAttribute="top" secondItem="suO-Rm-God" secondAttribute="bottom" constant="8" id="pbr-2a-eR2"/>
                             <constraint firstAttribute="centerX" secondItem="cKw-oF-j2q" secondAttribute="centerX" id="qiH-46-kfx"/>
-                            <constraint firstItem="cKw-oF-j2q" firstAttribute="top" secondItem="9U9-f5-DiZ" secondAttribute="bottom" constant="8" id="wkZ-bf-biZ"/>
+                            <constraint firstItem="441-Sm-syT" firstAttribute="top" secondItem="9U9-f5-DiZ" secondAttribute="bottom" constant="13" id="tj8-d9-XBo"/>
+                            <constraint firstItem="9U9-f5-DiZ" firstAttribute="leading" secondItem="xFI-s8-fiu" secondAttribute="leading" id="xGk-I0-x1R"/>
+                            <constraint firstItem="xFI-s8-fiu" firstAttribute="centerY" secondItem="441-Sm-syT" secondAttribute="centerY" id="y6Q-qE-rMZ"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="videoView" destination="9U9-f5-DiZ" id="gR9-No-sIO"/>
+                        <outlet property="workaroundRadar20762442Switch" destination="xFI-s8-fiu" id="l1Z-ej-qnO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

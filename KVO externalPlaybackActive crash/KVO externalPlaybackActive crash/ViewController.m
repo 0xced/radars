@@ -9,8 +9,6 @@
 
 @interface ViewController ()
 
-@property (nonatomic, weak) IBOutlet UIView *videoView;
-
 @property (nonatomic) MPMoviePlayerController *moviePlayerController;
 
 @end
@@ -36,7 +34,10 @@
 
 - (void) playStreamURL:(NSURL *)streamURL
 {
-	[self.moviePlayerController stop];
+	if (self.workaroundRadar20762442Switch.on)
+	{
+		[self.moviePlayerController stop];
+	}
 	self.moviePlayerController.contentURL = streamURL;
 	[self.moviePlayerController play];
 }
