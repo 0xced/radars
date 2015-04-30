@@ -29,6 +29,11 @@
 	[self playStreamURL:streamURL];
 }
 
+- (IBAction) stop:(id)sender
+{
+	[self.moviePlayerController stop];
+}
+
 - (void) playStreamURL:(NSURL *)streamURL
 {
 	self.moviePlayerController.contentURL = streamURL;

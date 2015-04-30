@@ -44,7 +44,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LIj-qa-e7r">
-                                <rect key="frame" x="20" y="364" width="560" height="216"/>
+                                <rect key="frame" x="20" y="402" width="560" height="178"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Playing one stream, then another one will cause a crash with the following exception on iOS 8.4 beta 2:
 
@@ -54,6 +54,15 @@ This worked fine since iOS 2.0</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="suO-Rm-God">
+                                <rect key="frame" x="284" y="364" width="33" height="30"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FJN-6y-7Fg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -63,9 +72,11 @@ This worked fine since iOS 2.0</string>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LIj-qa-e7r" secondAttribute="bottom" constant="20" id="EsB-WR-BHF"/>
                             <constraint firstItem="9U9-f5-DiZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="IGP-Ns-dr6"/>
                             <constraint firstAttribute="trailing" secondItem="LIj-qa-e7r" secondAttribute="trailing" constant="20" id="MPz-5i-7B8"/>
+                            <constraint firstAttribute="centerX" secondItem="suO-Rm-God" secondAttribute="centerX" id="NCi-Qg-8Ol"/>
+                            <constraint firstItem="suO-Rm-God" firstAttribute="top" secondItem="hHX-h0-DO4" secondAttribute="bottom" constant="8" id="Wsi-tb-DBB"/>
                             <constraint firstAttribute="centerX" secondItem="hHX-h0-DO4" secondAttribute="centerX" id="h1f-Rg-x49"/>
+                            <constraint firstItem="LIj-qa-e7r" firstAttribute="top" secondItem="suO-Rm-God" secondAttribute="bottom" constant="8" id="pbr-2a-eR2"/>
                             <constraint firstAttribute="centerX" secondItem="cKw-oF-j2q" secondAttribute="centerX" id="qiH-46-kfx"/>
-                            <constraint firstItem="LIj-qa-e7r" firstAttribute="top" secondItem="hHX-h0-DO4" secondAttribute="bottom" constant="8" id="tUX-sS-Rak"/>
                             <constraint firstItem="cKw-oF-j2q" firstAttribute="top" secondItem="9U9-f5-DiZ" secondAttribute="bottom" constant="8" id="wkZ-bf-biZ"/>
                         </constraints>
                     </view>
